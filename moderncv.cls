@@ -285,6 +285,7 @@
 \NewDocumentCommand{\social}{O{}O{}m}{%
   \ifthenelse{\equal{#2}{}}%
     {%
+      \ifthenelse{\equal{#1}{combined}}     {\collectionadd[combined]{socials}     {\protect#3}}                                                   {}%
       \ifthenelse{\equal{#1}{linkedin}}     {\collectionadd[linkedin]{socials}     {\protect\httpslink[#3]{www.linkedin.com/in/#3}}}               {}%
       \ifthenelse{\equal{#1}{xing}}         {\collectionadd[xing]{socials}         {\protect\httpslink[#3]{www.xing.com/profile/#3}}}              {}%
       \ifthenelse{\equal{#1}{twitter}}      {\collectionadd[twitter]{socials}      {\protect\httpslink[#3]{twitter.com/#3}}}                       {}%
@@ -378,6 +379,7 @@
 \newcommand*{\xboxsocialsymbol}         {}
 \newcommand*{\playstationsocialsymbol}  {}
 \newcommand*{\battlenetsocialsymbol}    {}
+\newcommand*{\combinedsocialsymbol}     {}
 
 % other
 %------
